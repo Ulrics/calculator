@@ -1,3 +1,101 @@
 * {
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+body {
+    background-color: #F7FAFD;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.calculator{
+    background-color: #FEFEFE;
+    border-radius: 16px;
+    border: 2px solid #A7A7A7;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+
+}
+
+.calculationContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+    padding: 16px 4px 0px 0px;
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.previousCalculation{
+    font: 300 36px/40px "Open Sans";
+    color: #7F7F7F;
+}
+
+.calculation{
+    font: 600 80px/80px "Open Sans";
+    color: #161616;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.numpad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    color: #161616;
+    font: 600 32px/48px "Open Sans";
+    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+}
+
+.operator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ABFF98;
+    color: #161616;
+    font: 600 32px/48px "Open Sans";
+    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+}
+
+.topButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B5B5B5;
+    color: #161616;
+    font: 600 24px/48px "Open Sans";
+    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+}
+
+.equal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #FFB34F;
+    color: #161616;
+    font: 600 32px/48px "Open Sans";
+    border-radius: 12px;
+    height: 64px;
 }
