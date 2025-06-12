@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #F7FAFD;
+    background-color: #EFF0F0;
 }
 
 .wrapper{
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 24px;
+    padding: 16px;
 
 }
 
@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 12px;
-    padding: 16px 4px 0px 0px;
+    padding: 40px 4px 0px 0px;
     margin-bottom: 24px;
     text-align: right;
 }
@@ -98,4 +98,24 @@ body {
     font: 600 32px/48px "Open Sans";
     border-radius: 12px;
     height: 64px;
+}
+
+.numpad:hover{
+    background-color: #D9D5D5;
+    cursor: pointer;
+}
+
+.operator:hover{
+    background-color: #88FB6E;
+    cursor: pointer;
+}
+
+.topButton:hover{
+    background-color: #949393;
+    cursor: pointer;
+}
+
+.equal:hover{
+    background-color: #FFA630;
+    cursor: pointer;
 }
