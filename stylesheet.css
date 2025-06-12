@@ -22,7 +22,8 @@ body {
     flex-direction: column;
     gap: 12px;
     padding: 16px;
-
+    max-width: 292px;
+    flex: 0;
 }
 
 .calculationContainer{
@@ -41,7 +42,7 @@ body {
 }
 
 .calculation{
-    font: 600 80px/80px "Open Sans";
+    font: 600 56px/80px "Open Sans";
     color: #161616;
 }
 
