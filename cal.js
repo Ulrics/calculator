@@ -20,39 +20,12 @@ const calc = document.querySelector(".calculation")
 const calcHistory = document.querySelector(".previousCalculation")
 
 function updateDisplay(){
-    console.log("updateDisplay was triggered");
     display += numValue;
     current = display;
     calc.textContent = display;
 }
 
-addGlobalEventListener("click", ".operator", e =>{
-    if (current === null){
-        console.log("current was null if is pushed")
-        operation = e.target.dataset.value;
-        previous = 0;
-        current = null;
-        display = "";
-        calc.textContent = display;
-        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
-    }
-    else if (result === null){
-        console.log("result was null if is pushed")
-        operation = e.target.dataset.value;
-        previous = parseFloat(current);
-        current = null;
-        display = "";
-        calc.textContent = display;
-        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
-    }
-    else{
-        operation = e.target.dataset.value;
-        current = null;
-        display = "";
-        calc.textContent = display;
-        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
-    }
-})
+addGlobalEventListener("click", ".operator", handleOperator)
 
 addGlobalEventListener("click", ".numpad", e =>{
     numValue = e.target.dataset.value;
@@ -65,6 +38,9 @@ addGlobalEventListener("click", ".topButton", e => {
     }
     if (e.target.dataset.value === "backspace"){
         backspace();
+    }
+    if (e.target.dataset.value === "modulus"){
+        handleOperator(e);
     }
 })
 
@@ -140,6 +116,34 @@ function backspace(){
     current = display;
     calc.textContent = display;
 
+}
+
+function handleOperator(e) {
+    if (current === null || current === "") {
+        console.log("current was null if is pushed");
+        operation = e.target.dataset.value;
+        previous = 0;
+        current = null;
+        display = "";
+        calc.textContent = display;
+        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
+    } else if (result === null) {
+        console.log("result was null if is pushed");
+        operation = e.target.dataset.value;
+        previous = parseFloat(current);
+        current = null;
+        display = "";
+        calc.textContent = display;
+        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
+    } else {
+        console.log("else is pushed");
+        operation = e.target.dataset.value;
+        previous = parseFloat(display);
+        current = null;
+        display = "";
+        calc.textContent = display;
+        calcHistory.textContent = `${previous} ${getOperatorString(operation)}`;
+    }
 }
 
 function add(argA, argB){
