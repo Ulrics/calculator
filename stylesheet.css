@@ -31,19 +31,21 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 12px;
-    padding: 40px 4px 0px 0px;
+    padding: 24px 4px 0px 0px;
     margin-bottom: 24px;
     text-align: right;
 }
 
 .previousCalculation{
-    font: 300 36px/40px "Open Sans";
+    font: 300 24px/32px "Open Sans";
     color: #7F7F7F;
+    min-height: 32px;
 }
 
 .calculation{
-    font: 600 56px/80px "Open Sans";
+    font: 600 48px/80px "Open Sans";
     color: #161616;
+    min-height: 80px;
 }
 
 .buttonContainer{
