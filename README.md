@@ -1,2 +1,2 @@
 # Calculator
-A simple calculator practice project
+Javascript excercise project: A simple calculator practice project
